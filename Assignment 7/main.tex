@@ -1,0 +1,68 @@
+\documentclass{beamer}
+\usetheme{CambridgeUS}
+
+\setbeamertemplate{caption}[numbered]{}
+
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{txfonts}
+
+\def\inputGnumericTable{}
+
+\usepackage[latin1]{inputenc}                                 
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                        
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}
+\usepackage{caption}
+
+\title{AI1110 \\ Assignment 7}
+\author{Bandaru Naresh Kumar \\ AI21BTECH11006}
+\date{}
+\begin{document}
+	% The title page
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+	% The table of contents
+	\begin{frame}{Outline}
+    		\tableofcontents
+	\end{frame}
+	
+	% The question
+	\section{Question}
+	\begin{frame}{Exercise 9.23}
+	Show that if X(t) is normal with autocorrelation $R(\tau)$,then\\
+	$P\{X^{\prime}(t)\leq a\} = G\left[ \dfrac{a}{\sqrt{-R^{\prime\prime}(0)}}\right] $
+	\end{frame}
+	
+	% The solution
+	\section{Solution}
+	\begin{frame}{Solution}
+	    Given,\\
+	    The RV $X^{\prime}(t)$ is normal with zero mean and variance.\\
+	    \begin{align}
+	    E\{{|X^{\prime}(t)|}^2\} &= R_{X^{\prime}X^{\prime}}(0)\\
+	                             &= -R^{\prime\prime}(0)
+	    \end{align}
+	 \end{frame}
+	 
+	 % The final answer
+	\section{Answer}
+	\begin{frame}{Answer}
+	  Hence,
+	  \begin{align}
+	    P\{X^{\prime}(t)\leq a\} &= F_{X^{\prime}}(a)\\
+	                             &= G\left[ \dfrac{a}{\sqrt{E\{{|X^{\prime}(t)|}^2\}}}\right] \\
+	                             &= G\left[ \dfrac{a}{\sqrt{-R^{\prime\prime}(0)}}\right] 
+	  \end{align}
+	\end{frame}
+	
+\end{document}
